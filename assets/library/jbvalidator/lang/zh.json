@@ -1,0 +1,62 @@
+{
+  "maxValue": "數值必須小於或等於 %s。",
+  "minValue": "數值必須大於或等於 %s。",
+  "maxLength": "請將此文字縮短至 %s 個字元以內（您目前使用了 %s 個字元）。",
+  "minLength": "請將此文字延長至 %s 個字元以上（您目前使用了 %s 個字元）。",
+  "minSelectOption": "請至少選擇 %s 個選項。",
+  "maxSelectOption": "請最多選擇 %s 個選項。",
+  "groupCheckBox": "請至少選擇 %s 個選項。",
+  "equal": "此欄位與 %s 欄位不符。",
+  "fileMinSize": "檔案大小不能小於 %s 位元組。",
+  "fileMaxSize": "檔案大小不能大於 %s 位元組。",
+  "number": "請輸入數字。",
+  "HTML5": {
+    "valueMissing": {
+      "INPUT": {
+        "default": "請填寫此欄位。",
+        "checkbox": "請勾選此核取方塊。",
+        "radio": "請選擇其中一個選項。",
+        "file": "請選擇檔案。"
+      },
+      "SELECT": "請從清單中選擇一個項目。",
+      "TEXTAREA": "請填寫此欄位。"
+    },
+    "typeMismatch": {
+      "email": "請輸入電子郵件地址。",
+      "url": "請輸入網址。"
+    },
+    "rangeUnderflow": {
+      "date": "數值必須為 %s 或之後的日期。",
+      "month": "數值必須為 %s 或之後的月份。",
+      "week": "數值必須為 %s 或之後的週次。",
+      "time": "數值必須為 %s 或之後的時間。",
+      "datetimeLocale": "數值必須為 %s 或之後的日期時間。",
+      "number": "數值必須大於或等於 %s。",
+      "range": "數值必須大於或等於 %s。"
+    },
+    "rangeOverflow": {
+      "date": "數值必須為 %s 或之前的日期。",
+      "month": "數值必須為 %s 或之前的月份。",
+      "week": "數值必須為 %s 或之前的週次。",
+      "time": "數值必須為 %s 或之前的时间。",
+      "datetimeLocale": "數值必須為 %s 或之前的日期時間。",
+      "number": "數值必須小於或等於 %s。",
+      "range": "數值必須小於或等於 %s。"
+    },
+    "stepMismatch": {
+      "date": "您只能在日期日曆中選擇每 %s 天。",
+      "month": "您只能在日期日曆中選擇每 %s 個月。",
+      "week": "您只能在日期日曆中選擇每 %s 週。",
+      "time": "您只能在時間選擇器中選擇每 %s 秒。",
+      "datetimeLocale": "您只能在時間選擇器中選擇每 %s 秒。",
+      "number": "請輸入有效值。僅限 %s 及 %s 的倍數。",
+      "range": "請輸入有效值。僅限 %s 及 %s 的倍數。"
+    },
+    "tooLong": "請將此文字縮短至 %s 個字元以內（您目前使用了 %s 個字元）。",
+    "tooShort": "請將此文字延長至 %s 個字元以上（您目前使用了 %s 個字元）。",
+    "patternMismatch": "請符合要求的格式。 %s",
+    "badInput": {
+      "number": "請輸入數字。"
+    }
+  }
+}
