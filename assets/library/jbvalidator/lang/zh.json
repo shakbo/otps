@@ -1,8 +1,8 @@
 {
-  "maxValue": "數值必須小於或等於 %s。",
-  "minValue": "數值必須大於或等於 %s。",
-  "maxLength": "請將此文字縮短至 %s 個字元以內（您目前使用了 %s 個字元）。",
-  "minLength": "請將此文字延長至 %s 個字元以上（您目前使用了 %s 個字元）。",
+  "maxValue": "必須小於或等於 %s。",
+  "minValue": "必須大於或等於 %s。",
+  "maxLength": "請將此欄位內容縮短至 %s 個字元以內（目前有 %s 個字元）。",
+  "minLength": "請將此欄位內容延長至 %s 個字元以上（目前有 %s 個字元）。",
   "minSelectOption": "請至少選擇 %s 個選項。",
   "maxSelectOption": "請最多選擇 %s 個選項。",
   "groupCheckBox": "請至少選擇 %s 個選項。",
@@ -26,22 +26,22 @@
       "url": "請輸入網址。"
     },
     "rangeUnderflow": {
-      "date": "數值必須為 %s 或之後的日期。",
-      "month": "數值必須為 %s 或之後的月份。",
-      "week": "數值必須為 %s 或之後的週次。",
-      "time": "數值必須為 %s 或之後的時間。",
-      "datetimeLocale": "數值必須為 %s 或之後的日期時間。",
-      "number": "數值必須大於或等於 %s。",
-      "range": "數值必須大於或等於 %s。"
+      "date": "必須為 %s 或之後的日期。",
+      "month": "必須為 %s 或之後的月份。",
+      "week": "必須為 %s 或之後的週次。",
+      "time": "必須為 %s 或之後的時間。",
+      "datetimeLocale": "必須為 %s 或之後的日期時間。",
+      "number": "必須大於或等於 %s。",
+      "range": "必須大於或等於 %s。"
     },
     "rangeOverflow": {
-      "date": "數值必須為 %s 或之前的日期。",
-      "month": "數值必須為 %s 或之前的月份。",
-      "week": "數值必須為 %s 或之前的週次。",
-      "time": "數值必須為 %s 或之前的时间。",
-      "datetimeLocale": "數值必須為 %s 或之前的日期時間。",
-      "number": "數值必須小於或等於 %s。",
-      "range": "數值必須小於或等於 %s。"
+      "date": "必須為 %s 或之前的日期。",
+      "month": "必須為 %s 或之前的月份。",
+      "week": "必須為 %s 或之前的週次。",
+      "time": "必須為 %s 或之前的时间。",
+      "datetimeLocale": "必須為 %s 或之前的日期時間。",
+      "number": "必須小於或等於 %s。",
+      "range": "必須小於或等於 %s。"
     },
     "stepMismatch": {
       "date": "您只能在日期日曆中選擇每 %s 天。",
