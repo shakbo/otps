@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/library/bootstrap/bootstrap.css">
     <script src="assets/library/bootstrap/bootstrap.bundle.js"></script>
-    <title>OTP 展示 | 首頁</title>
     <link rel="stylesheet" type="text/css" href="assets/stylesheet/index.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheet/modal.css">
+    <script src="assets/library/jquerry/jquery-3.7.1.js"></script>
+    <script src="assets/library/jbvalidator/jbvalidator.js"></script>
     <?php
     session_start();
 
-    include_once("config.php");
+    $sql = include_once('configs/database.php');
 
-    $current_page = isset($_GET['page']) ? $_GET['page'] : 'homepage';
+    $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
     $page_data = [
-        'homepage' => [
+        'home' => [
             'title' => 'OTP 展示 | 首頁',
-            'stylesheet' => 'assets/stylesheet/index.css',
+            'stylesheet' => 'assets/stylesheet/home.css',
             'content' => 'assets/content/home.php',
         ],
-        'test' => [
-            'title' => 'OTP 展示 | 測試',
-            'stylesheet' => 'assets/stylesheet/index.css',
-            'content' => 'assets/content/test.php',
+        'demo' => [
+            'title' => 'OTP 展示 | 實做',
+            'stylesheet' => 'assets/stylesheet/demo.css',
+            'content' => 'assets/content/demo.php',
         ]
     ];
 

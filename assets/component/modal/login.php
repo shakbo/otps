@@ -1,39 +1,3 @@
-<?php
-include_once "./config.php";
-if (isset($_POST['login'])) {
-    $email = $_POST['email'];
-}
-?>
-
-<script>
-    $(function (){
-        let validator = $('.needs-validation').jbvalidator({
-            errorMessage: true,
-            successClass: true,
-            language: 'assets/library/jbvalidator/lang/zh.json'
-        });
-
-        validator.validator.example = function(el, event){
-            if($(el).is('[name=loginInputEmail]') && $(el).val().length < 3){
-                return 'Your username is too short.';
-            }
-        }
-
-        //custom validate methode
-        validator.validator.custom = function(el, event){
-            if($(el).is('[name=loginInputPassword]') && $(el).val().length < 5){
-                return 'Your password is too weak.';
-            }
-        }
-
-        //check form without submit
-        validator.checkAll(); //return error count
-
-        //reload instance after dynamic element is added
-        validator.reload();
-    })
-</script>
-
 <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -42,14 +6,14 @@ if (isset($_POST['login'])) {
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="loginForm" method="post" class="needs-validation" novalidate action="#">
+                <form id="loginForm" method="post" action="assets/script/loginValidate.php" class="needs-validation" novalidate>
                     <div class="mb-3 has-validation">
                         <label for="loginInputEmail" class="form-label">電子郵件地址</label>
-                        <input type="email" class="form-control" id="loginInputEmail" name="loginInputEmail" required>
+                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="loginInputEmail" name="email" data-v-min-length="3" required>
                     </div>
                     <div class="mb-3">
                         <label for="loginInputPassword" class="form-label has-validation">密碼</label>
-                        <input type="password" pattern="[a-zA-Z0-9]{8,}" class="form-control" id="loginInputPassword" name="loginInputPassword" required>
+                        <input type="password" class="form-control" id="loginInputPassword" name="password" data-v-min-length="6" data-v-message="長度需大於六個字，並包含大小寫英文及數字。" required>
                     </div>
                     <button type="submit" form="loginForm" class="btn btn-primary mb-3 w-100">登入</button>
                     <div class="form-check">
@@ -66,3 +30,14 @@ if (isset($_POST['login'])) {
         </div>
     </div>
 </div>
+<script>
+    $(function (){
+        let validator = $('.needs-validation').jbvalidator({
+            errorMessage: true,
+            successClass: true,
+            language: 'assets/library/jbvalidator/lang/zh.json'
+        });
+
+        validator.reload();
+    })
+</script>

@@ -21,8 +21,6 @@
                         <li><a class="dropdown-item disabled" href="#">時間型(Time)</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <?php if(isset($showLogin) && $showLogin): ?>
-                            <script src="assets/library/jquerry/jquery-3.7.1.js"></script>
-                            <script src="assets/library/jbvalidator/jbvalidator.js"></script>
                             <li><a class="dropdown-item" href='#' data-bs-toggle="modal" data-bs-target="#loginModal">請先登入</a></li>
                         <?php else: ?>
                             <li><a class="dropdown-item disabled" href='#'>請先登入</a></li>

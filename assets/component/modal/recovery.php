@@ -1,25 +1,3 @@
-<script>
-    $(function (){
-
-        let validator = $('.needs-validation').jbvalidator({
-            errorMessage: true,
-            successClass: true,
-            language: "assets/library/jbvalidator/lang/zh.json"
-        });
-
-        validator.validator.example = function(el, event){
-            if($(el).is('[name=recoveryInputUsername]') && $(el).val().length < 3){
-                return 'Your username is too short.';
-            }
-        }
-
-        //check form without submit
-        validator.checkAll(); //return error count
-
-        //reload instance after dynamic element is added
-        validator.reload();
-    })
-</script>
 <div class="modal fade" id="recoveryModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="recoveryModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -30,8 +8,8 @@
             <div class="modal-body">
                 <form id="recoveryForm" class="needs-validation" novalidate>
                     <div class="mb-3">
-                        <label for="recoveryInputUsername" class="form-label">使用者名稱</label>
-                        <input type="text" class="form-control" id="recoveryInputUsername" name="recoveryInputUsername" required>
+                        <label for="recoveryInputEmail" class="form-label">使用者名稱</label>
+                        <input type="text" class="form-control" id="recoveryInputEmail" name="email" required>
                     </div>
                     <button type="submit" form="recoveryForm" class="btn btn-primary w-100">送出</button>
                 </form>
@@ -42,3 +20,14 @@
         </div>
     </div>
 </div>
+<script>
+    $(function (){
+        let validator = $('.needs-validation').jbvalidator({
+            errorMessage: true,
+            successClass: true,
+            language: 'assets/library/jbvalidator/lang/zh.json'
+        });
+
+        validator.reload();
+    })
+</script>
