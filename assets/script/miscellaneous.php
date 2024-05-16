@@ -1,21 +1,21 @@
 <?php
 function alert($message) {
     echo "<script>alert('$message');
-     window.location.href='index.php';
-    </script>"; 
+    	document.location.href='/otps';
+    </script>";
     return false;
 }
 
-if(!$con = mysqli_connect("localhost","root","","otps"))
+if(!$sqlConnection = mysqli_connect("localhost","root","","otps"))
 {
 	die("錯誤: 資料庫連線失敗" . mysqli_connect_error());
 }
 
-function query($query)
+function mysqli_query_custom($sqlCommand)
 {
-	global $con;
+	global $sqlConnection;
 
-	$result = mysqli_query($con, $query);
+	$result = mysqli_query($sqlConnection, $sqlCommand);
 	if(!is_bool($result) && mysqli_num_rows($result) > 0)
 	{
 		$res = [];
@@ -31,8 +31,9 @@ function query($query)
 
 function is_logged_in()
 {
-	if(!empty($_SESSION['SES']) && is_array($_SESSION['SES'])){
+	session_start();
 
+	if(!empty($_SESSION['SES']) && is_array($_SESSION['SES'])){
 		if(!empty($_SESSION['SES']['id']))
 			return true;
 	}
@@ -43,8 +44,8 @@ function is_logged_in()
 		$token_key = $parts[0];
 		$token_value = $parts[1];
 
-		$query = "SELECT * FROM users WHERE token_key = '$token_key' limit 1";
-		$row = query($query);
+		$sqlCommand = "SELECT * FROM users WHERE token_key = '$token_key' limit 1";
+		$row = mysqli_query_custom($sqlCommand);
 		if($row)
 		{
 			$row = $row[0];
