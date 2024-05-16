@@ -31,8 +31,6 @@ function mysqli_query_custom($sqlCommand)
 
 function is_logged_in()
 {
-	session_start();
-
 	if(!empty($_SESSION['SES']) && is_array($_SESSION['SES'])){
 		if(!empty($_SESSION['SES']['id']))
 			return true;
