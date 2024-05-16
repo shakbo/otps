@@ -8,6 +8,7 @@
     <script src="assets/library/bootstrap/bootstrap.bundle.js"></script>
     <script src="assets/library/jquerry/jquery-3.7.1.js"></script>
     <script src="assets/library/jbvalidator/jbvalidator.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/general.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheet/modal.css">
     <?php
     require_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/script/miscellaneous.php');
