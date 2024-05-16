@@ -4,6 +4,7 @@ session_start();
 require_once($_SERVER['DOCUMENT_ROOT'].'/otps/configs/general.php');
 $sqlConnection = require_once($_SERVER['DOCUMENT_ROOT'].'/otps/configs/database.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/script/miscellaneous.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/script/email.php');
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -27,7 +28,7 @@ $result = $result[0];
 if(!password_verify($password, $result['password'])) {
     alert("帳號或密碼錯誤！");
     die();
-} 
+}
 
 $_SESSION['SES'] = $result;
 

@@ -3,6 +3,7 @@ session_start();
 
 $sqlConnection = require_once($_SERVER['DOCUMENT_ROOT'].'/otps/configs/database.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/script/miscellaneous.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/script/hotp.php');
 
 $username = $_POST['username'];
 $email = $_POST['email'];
@@ -10,6 +11,11 @@ $password = $_POST['password'];
 
 if(!($_SERVER['REQUEST_METHOD'] == 'POST')) {
     alert("呼叫方法錯誤！");
+    die();
+}
+
+if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+    alert("電子郵件格式有誤！");
     die();
 }
 
