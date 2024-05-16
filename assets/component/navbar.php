@@ -19,11 +19,9 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item disabled" href="#">簡訊型(SMS)</a></li>
                         <li><a class="dropdown-item disabled" href="#">時間型(Time)</a></li>
-                        <li><hr class="dropdown-divider"></li>
                         <?php if(isset($showLogin) && $showLogin): ?>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href='#' data-bs-toggle="modal" data-bs-target="#loginModal">請先登入</a></li>
-                        <?php else: ?>
-                            <li><a class="dropdown-item disabled" href='#'>請先登入</a></li>
                         <?php endif; ?>
                     </ul>
                 </li>
@@ -33,6 +31,8 @@
             </ul>
             <?php if(isset($showLogin) && $showLogin): ?>
                     <button type="button" class="btn btn-outline-primary nav-item" data-bs-toggle="modal" data-bs-target="#loginModal">登入</button>
+            <?php else: ?>
+                <a href="assets/script/logout.php" class="btn btn-outline-danger" tabindex="-1" role="button" aria-disabled="true">登出</a>
             <?php endif; ?>
         </div>
     </div>
