@@ -17,7 +17,7 @@
                     </div>
                     <button type="submit" form="loginForm" class="btn btn-primary mb-3 w-100">登入</button>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberCheck">
+                        <input type="checkbox" class="form-check-input" id="rememberCheck" name="remember">
                         <label class="form-check-label" for="rememberCheck">記住登入資訊</label>
                     </div>
                 </form>
