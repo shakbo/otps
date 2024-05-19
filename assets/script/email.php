@@ -23,6 +23,9 @@ function sendMail($email, $subject, $message) {
 
     $mail -> Port = 587;
 
+    $mail->CharSet = "UTF-8";
+    $mail->Subject = "=?UTF-8?B?".base64_encode($subject)."?=";
+
     $mail -> setFrom(MAIL_SEND_FROM, MAIL_SEND_FROM_NAME);
 
     $mail -> addAddress($email);
