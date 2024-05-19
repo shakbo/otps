@@ -13,9 +13,6 @@
                     </div>
                     <button type="submit" form="authenticatortotpValidateForm" class="btn btn-primary w-100">送出</button>
                 </form>
-                <form id="regenerateForm" method="post" action="assets/script/otp/regenerate.php">
-                    <button type="submit" form="regenerateForm" class="btn btn-secondary w-100 mt-2">重新產生</button>
-                </form>
             </div>
             <div class="modal-footer">
                 <p class="text-center mx-auto">還沒綁定驗證器? <a class="hyperlink" href="#" data-bs-toggle="modal" data-bs-target="#qrCodeModal">立即綁定</a>。</p>
