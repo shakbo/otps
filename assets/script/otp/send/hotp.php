@@ -29,7 +29,7 @@ sendMail($email, "HOTP驗證碼", $hotpValue);
 
 // $twilioClient = require_once($_SERVER['DOCUMENT_ROOT'].'/otps/configs/twilio.php');
 // $twilioClient->messages->create(
-//     '+886938962200', [
+//     '', [
 //         'from' => '+17012034272',
 //         'body' => $hotpValue
 //     ]
