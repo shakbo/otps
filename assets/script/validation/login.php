@@ -47,7 +47,7 @@ if($remember) {
 
 $_SESSION["loggedin"] = true;
 
-header("Location: " . ROOT . 'index.php?page=personalHomepage');
+header("Location: https://otps.kaoro.net/otps/index.php?page=personalHomepage");
 mysqli_close($sqlConnection);
 exit;
 ?>

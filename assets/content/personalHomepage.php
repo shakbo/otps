@@ -1,6 +1,5 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/script/email.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/component/modal/infoupdate.php');
 
 if(isset($_SESSION['SES']['username'])) {
     echo "  <script>
@@ -32,6 +31,9 @@ if(isset($_SESSION['SES']['username'])) {
     typewriter.start();
 </script>
 
-<button type="button" class="btn btn-light fixed-bottom-right" data-bs-toggle="modal" data-bs-target="#infoUpdateModal">
-    編輯個人資訊
-</button>
+<?php
+if(isset($_SESSION['SES']['username'])) {
+    include_once($_SERVER['DOCUMENT_ROOT'].'/otps/assets/component/modal/infoupdate.php');
+    echo ("<button type='button' class='btn btn-light fixed-bottom-right' data-bs-toggle='modal' data-bs-target='#infoUpdateModal'>編輯個人資訊</button>");
+}
+?>

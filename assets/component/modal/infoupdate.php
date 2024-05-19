@@ -1,13 +1,17 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'].'/otps/configs/database.php');
 
-$id = $_SESSION['SES']['id'];
 
-$sqlCommand = "SELECT `username`, `email`, `phoneNumber` FROM `users` WHERE `id` = $id";
-$result = mysqli_query($sqlConnection, $sqlCommand);
-$row = mysqli_fetch_assoc($result);
+if(isset($_SESSION['SES']['username'])) {
+    $id = $_SESSION['SES']['id'];
+
+    $sqlCommand = "SELECT `username`, `email`, `phoneNumber` FROM `users` WHERE `id` = $id";
+    $result = mysqli_query($sqlConnection, $sqlCommand);
+    $row = mysqli_fetch_assoc($result);
+}
 ?>
 
+<?php if(isset($_SESSION['SES']['username'])): ?>
 <div class="modal fade" id="infoUpdateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoUpdateModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -39,6 +43,7 @@ $row = mysqli_fetch_assoc($result);
         </div>
     </div>
 </div>
+<?php endif; ?>
 <script>
     $(function() {
         let validator = $('.needs-validation').jbvalidator({

@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 300)) {
     session_destroy();
     session_unset();
-    header("location: index.php?page=home");
+    header("location: https://otps.kaoro.net/otps/index.php?page=home");
 }
 ?>
 <!DOCTYPE html>

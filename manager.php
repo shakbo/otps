@@ -3,14 +3,14 @@ session_start();
 
 if(!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)) {
     session_destroy();
-    header("location: index.php?page=home");
+    header("https://otps.kaoro.net/otps/index.php?page=home");
     exit;
 }
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 300)) {
     session_destroy();
     session_unset();
-    header("location: index.php?page=home");
+    header("https://otps.kaoro.net/otps/index.php?page=home");
 }
 $_SESSION['LAST_ACTIVITY'] = time();
 ?>

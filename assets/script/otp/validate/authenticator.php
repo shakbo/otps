@@ -32,4 +32,12 @@ function alert($message) {
     </script>";
     return false;
 }
+
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "Debug Objects: " . $output . "";
+}
 ?>

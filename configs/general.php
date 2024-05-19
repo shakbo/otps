@@ -1,3 +1,3 @@
 <?php
-define('ROOT', 'http://localhost/otps/');
+define('ROOT', 'https://otps.kaoro.net/otps/');
 ?>

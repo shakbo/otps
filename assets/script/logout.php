@@ -11,4 +11,4 @@ if(!empty($_SESSION['SES']) || !empty($_SESSION['loggedin']))
 	session_destroy(); 
 }
 
-header("Location: " . ROOT . 'index.php');
+header("Location: https://otps.kaoro.net/otps/index.php?page=home");
