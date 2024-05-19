@@ -1,3 +1,9 @@
+.navbar {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -20,6 +26,10 @@ main {
     z-index: -1;
 }
 
+footer {
+    background-color: rgb(248, 249, 250);
+}
+
 @media only screen and (min-width: 992px) {
     .nav-item {
         scale: 1;
@@ -27,6 +37,16 @@ main {
     }
     
     .nav-item:hover {
+        scale: 1.2;
+        transition: all 0.3s ease;
+    }
+
+    .footer ul li a {
+        scale: 1;
+        transition: all 0.3s ease;
+    }
+    
+    .footer ul li a:hover {
         scale: 1.2;
         transition: all 0.3s ease;
     }
