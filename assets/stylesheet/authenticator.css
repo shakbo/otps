@@ -1,0 +1,31 @@
+@media only screen and (max-width: 575px) {
+    main {
+        margin-top: 65px;
+    }
+
+    .card-2 {
+        margin: 20px 0px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .card {
+        scale: 1;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        scale: 1.1;
+        transition: all 0.3s ease;
+    }
+
+    .card .btn {
+        scale: 1;
+        transition: all 0.3s ease;
+    }
+
+    .card .btn:hover {
+        scale: 1.2;
+        transition: all 0.3s ease;
+    }
+}

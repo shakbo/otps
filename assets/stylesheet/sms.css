@@ -1,0 +1,32 @@
+@media only screen and (max-width: 950px) {
+    main {
+        margin-top: 65px;
+        height: 100%;
+    }
+
+    .card-outbox {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width: 639px) {
+    .card {
+        scale: 1;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        scale: 1.1;
+        transition: all 0.3s ease;
+    }
+
+    .card .btn {
+        scale: 1;
+        transition: all 0.3s ease;
+    }
+
+    .card .btn:hover {
+        scale: 1.2;
+        transition: all 0.3s ease;
+    }
+}
