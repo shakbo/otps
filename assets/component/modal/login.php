@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="loginForm" method="post" action="assets/script/loginValidate.php" class="needs-validation" novalidate>
+                <form id="loginForm" method="post" action="assets/script/validation/login.php" class="needs-validation" novalidate>
                     <div class="mb-3 has-validation">
                         <label for="loginInputEmail" class="form-label">電子郵件地址</label>
                         <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="loginInputEmail" name="email" data-v-min-length="3" required>
