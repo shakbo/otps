@@ -12,27 +12,33 @@
                 <li class="nav-item mx-3">
                     <a class="nav-link active" aria-current="page" href="index.php">首頁</a>
                 </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link active" aria-current="page" href="index.php?page=personalHomepage">個人主頁</a>
+                </li>
                 <li class="nav-item mx-3 dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         功能
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item disabled" href="#">簡訊型(SMS)</a></li>
-                        <li><a class="dropdown-item disabled" href="#">時間型(Time)</a></li>
                         <?php if(isset($showLogin) && $showLogin): ?>
+                            <li><a class="dropdown-item disabled" href="#">簡訊</a></li>
+                            <li><a class="dropdown-item disabled" href="#">驗證器</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href='#' data-bs-toggle="modal" data-bs-target="#loginModal">請先登入</a></li>
+                        <?php else: ?>
+                            <li><a class="dropdown-item" href="manager.php?page=sms">簡訊</a></li>
+                            <li><a class="dropdown-item" href="manager.php?page=authenticator">驗證器</a></li>
                         <?php endif; ?>
                     </ul>
                 </li>
                 <li class="nav-item mx-3">
-                    <a class="nav-link" href="#">關於</a>
+                    <a class="nav-link" href="index.php?page=about">關於</a>
                 </li>
             </ul>
             <?php if(isset($showLogin) && $showLogin): ?>
                     <button type="button" class="btn btn-outline-primary nav-item" data-bs-toggle="modal" data-bs-target="#loginModal">登入</button>
             <?php else: ?>
-                <a href="assets/script/logout.php" class="btn btn-outline-danger" tabindex="-1" role="button" aria-disabled="true">登出</a>
+                <a href="assets/script/logout.php" class="btn btn-outline-danger nav-item" tabindex="-1" role="button" aria-disabled="true">登出</a>
             <?php endif; ?>
         </div>
     </div>
